@@ -21,18 +21,16 @@ class MovieDetailViewController: BaseViewController {
         presenter.movieDetail?.id=self.id;
         presenter.GetMovieDetail();
         presenter.GetMovieGenres(id: "\(id!)")
-        presenter.GetVideoURL(show_id: "\(id)")
-        self.initNavbar()
     }
-    @IBOutlet weak var backButton: UIBarButtonItem!
     
-    
+    @IBAction func BackOnClick(_ sender: Any) {
+        self.presentingViewController?.dismiss(animated: true, completion: nil);
+    }
+    @IBAction func ViewEpisodeOnClick(_ sender: Any) {
+        performSegue(withIdentifier: "viewVideosSegue", sender: nil);
+    }
 }
 extension MovieDetailViewController:MovieDetailView{
-    func getVideoSuccess() {
-        print("Movies Available");
-        print(self.presenter.movieVideo.count);
-    }
     func getMovieGenreSuccess() {
         print("Movie Genre");
         print(self.presenter.movieGenre.count);
@@ -58,13 +56,11 @@ extension MovieDetailViewController:MovieDetailView{
 }
 //MARK: Movie Detail
 extension MovieDetailViewController{
-    func initNavbar(){
-        self.backButton.action=#selector(back);
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "viewVideosSegue"{
+            let dest=segue.destination as! MovieTabViewController;
+            dest.inject(movieInfo: self.presenter.movieDetail!);
+        }
     }
-    
-    @objc func back(){
-        self.presentingViewController?.dismiss(animated: true, completion: nil);
-    }
-    
 }
 

@@ -36,6 +36,10 @@ extension SwinjectStoryboard {
         defaultContainer.storyboardInitCompleted(MovieDetailViewController.self){ (r, c) in
             c.presenter=r.resolve(MovieDetailPresenter.self);
         }
+        defaultContainer.storyboardInitCompleted(EpisodeListViewController.self){ (r, c) in
+            c.presenter=r.resolve(MovieDetailPresenter.self);
+        }
+        
     }
     
 }

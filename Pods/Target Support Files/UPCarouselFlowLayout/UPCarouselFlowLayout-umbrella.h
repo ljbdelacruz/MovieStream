@@ -10,7 +10,8 @@
 #endif
 #endif
 
+#import "UPCarouselFlowLayout.h"
 
-FOUNDATION_EXPORT double iOSDropDownVersionNumber;
-FOUNDATION_EXPORT const unsigned char iOSDropDownVersionString[];
+FOUNDATION_EXPORT double UPCarouselFlowLayoutVersionNumber;
+FOUNDATION_EXPORT const unsigned char UPCarouselFlowLayoutVersionString[];
 

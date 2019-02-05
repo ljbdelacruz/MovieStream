@@ -21,7 +21,8 @@ target 'iOSBaseCode' do
     pod 'SwiftKeychainWrapper', '3.2.0'
     
     # ui for dropdown
-    pod 'iOSDropDown'
     
-    
+    # ui for carousel view
+    pod 'UPCarouselFlowLayout'
+
 end

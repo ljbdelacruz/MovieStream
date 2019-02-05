@@ -9,11 +9,19 @@
 import Foundation
 import RxSwift
 protocol MovieDetailView: BaseView {
-    func getMovieDetailSuccess()
+    func getMovieDetailSuccess();
     func getMovieGenreSuccess();
     func getVideoSuccess();
-    
 }
+extension MovieDetailView{
+    func getMovieDetailSuccess(){
+    }
+    func getMovieGenreSuccess(){
+    }
+    func getVideoSuccess(){
+    }
+}
+
 class MovieDetailPresenter: BasePresenter {
     private let moviesRepository: MoviesRepository;
     private let genreRepository: GenreRespository;

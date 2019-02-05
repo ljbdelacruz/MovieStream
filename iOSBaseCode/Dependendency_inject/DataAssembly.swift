@@ -20,5 +20,7 @@ class DataAssembly: Assembly {
         container.autoregister(UserRepository.self, initializer: UserRepository.init).inObjectScope(.container)
         container.autoregister(ShowsRepository.self, initializer: ShowsRepository.init).inObjectScope(.container)
         container.autoregister(MoviesRepository.self, initializer: MoviesRepository.init).inObjectScope(.container)
+        container.autoregister(GenreRespository.self, initializer: GenreRespository.init).inObjectScope(.container)
+        container.autoregister(VideoURLRepository.self, initializer: VideoURLRepository.init).inObjectScope(.container)
     }
 }

@@ -6,19 +6,24 @@
 //
 import ObjectMapper
 class MovieResponse: Mappable {
-    var id:String?;
+    var id:Int?;
     var title:String?;
-    var summary:String?;
+    var description:String?;
+    var posterImage:String?
+    var promoImage:String?;
+    var videoPromo:String?;
+    var isSeries:Int?;
     required init?(map: Map) {
     }
-    init(id:String, title:String, summary:String){
+    init(id:Int){
         self.id=id;
-        self.title=title;
-        self.summary=summary;
     }
     func mapping(map: Map) {
         id <- map["id"]
         title <- map["title"]
-        summary <- map["summary"]
+        description <- map["description"]
+        promoImage <- map["profileImage"]
+        videoPromo <- map["videoPromo"]
+        isSeries <- map["isSeries"]
     }
 }

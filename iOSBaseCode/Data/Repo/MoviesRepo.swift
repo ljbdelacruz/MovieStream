@@ -24,4 +24,29 @@ class MoviesRepository {
                 return resp;
             })
     }
+    func getByInfo(id:Int) -> Observable<MovieResponse> {
+        return service.rx.request(.getMovieInfo(id: id))
+            .asObservable()
+            .mapErrors(provider: service)
+            .mapObject(MovieResponse.self).map({ resp in
+                return resp;
+            })
+    }
+    func getMoviesWithLimit(limit:Int) -> Observable<[MovieResponse]> {
+        return service.rx.request(.allMovieWithLimit(limit: limit))
+            .asObservable()
+            .mapErrors(provider: service)
+            .mapArray(MovieResponse.self).map({ resp in
+                return resp;
+            })
+    }
+    func getMoviesByTitle(title:String, limit:Int) -> Observable<[MovieResponse]> {
+        return service.rx.request(.getMovieSearchByTitle(title: title, limit:limit))
+            .asObservable()
+            .mapErrors(provider: service)
+            .mapArray(MovieResponse.self).map({ resp in
+                return resp;
+            })
+    }
+    
 }

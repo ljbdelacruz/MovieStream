@@ -2,6 +2,7 @@ PODS:
   - Alamofire (4.8.1)
   - FCUUID (1.3.1):
     - UICKeyChainStore (~> 2.1.0)
+  - iOSDropDown (0.2.7)
   - Moya (12.0.1):
     - Moya/Core (= 12.0.1)
   - Moya-ObjectMapper/Core (2.8):
@@ -35,6 +36,7 @@ PODS:
 
 DEPENDENCIES:
   - FCUUID (= 1.3.1)
+  - iOSDropDown
   - Moya (~> 12.0.1)
   - Moya-ObjectMapper/RxSwift (= 2.8)
   - Moya/RxSwift (= 12.0.1)
@@ -49,6 +51,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - FCUUID
+    - iOSDropDown
     - Moya
     - Moya-ObjectMapper
     - ObjectMapper
@@ -65,6 +68,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
   FCUUID: bb054fc90cd7cd99320f9f6ff8e130fe607fba05
+  iOSDropDown: 7a4cfc67d5166f319858747b63cd2f7760c4fb4b
   Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
   Moya-ObjectMapper: c514b5eafcfd5e260f85f7a5bf66895a217e2b37
   ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
@@ -78,6 +82,6 @@ SPEC CHECKSUMS:
   SwinjectStoryboard: 688f096033103e66ffcf6ca678211acd7d7be505
   UICKeyChainStore: 85db518bb1d294366d15ec9b92a416c4e670518f
 
-PODFILE CHECKSUM: acfbced0322e851d1fdf8c3d6d2e4d200cdb7474
+PODFILE CHECKSUM: e18d26cfba75a34f2f8bb3cdd2e5f07002180436
 
 COCOAPODS: 1.5.3

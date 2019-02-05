@@ -19,4 +19,9 @@ target 'iOSBaseCode' do
     pod 'SwiftyRSA', '1.5.0'
     
     pod 'SwiftKeychainWrapper', '3.2.0'
+    
+    # ui for dropdown
+    pod 'iOSDropDown'
+    
+    
 end

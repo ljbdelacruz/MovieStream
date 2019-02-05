@@ -17,7 +17,7 @@ class PresentationAssembly: Assembly {
         container.autoregister(LoginPresenter.self, initializer: LoginPresenter.init)
         container.autoregister(DashboardPresenter.self, initializer: DashboardPresenter.init)
         container.autoregister(HomeViewPresenter.self, initializer: HomeViewPresenter.init)
-
+        container.autoregister(MovieDetailPresenter.self, initializer: MovieDetailPresenter.init)
     }
     
 }
@@ -32,6 +32,9 @@ extension SwinjectStoryboard {
         }
         defaultContainer.storyboardInitCompleted(HomeViewController.self){ (r, c) in
             c.presenter=r.resolve(HomeViewPresenter.self);
+        }
+        defaultContainer.storyboardInitCompleted(MovieDetailViewController.self){ (r, c) in
+            c.presenter=r.resolve(MovieDetailPresenter.self);
         }
     }
     

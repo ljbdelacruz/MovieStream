@@ -12,6 +12,7 @@ import SwiftKeychainWrapper
 class Constants{
     static let instance = Constants()
     static let baseURL:String = "http://localhost:8080";
+    static var genres:[GenreResponse]=[];
     struct Keys {
         static let user = "user"
         static let passwordGrantedToken = "passwordGrantedToken"
